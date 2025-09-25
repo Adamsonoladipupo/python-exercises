@@ -17,4 +17,6 @@ father_current_age = int(input("Enter the father's currecnt age: "))
 son_current_age = int(input("Enter the son's current age: "))
 father_twice_as_old = 2*son_current_age - father_current_age
 year_father_twice_as_old = current_year + father_twice_as_old
+if father_twice_as_old < 0 :
+	father_twice_as_old = father_twice_as_old * (-1)
 print("Father was/is twice as old as son ",father_twice_as_old ,"years ago, in the year ", year_father_twice_as_old,".")

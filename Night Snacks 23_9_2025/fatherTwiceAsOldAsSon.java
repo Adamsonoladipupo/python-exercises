@@ -27,6 +27,9 @@ System.out.print("Enter the son's currecnt age:  ");
 int currentSonAge = input.nextInt();
 
 int fatherTwiceAsOld = 2*currentSonAge - currentFatherAge;
+if (fatherTwiceAsOld < 0){
+	fatherTwiceAsOld = fatherTwiceAsOld * (-1);
+}
 int yearFatherTwiceAsOld = currentYear + fatherTwiceAsOld;
 
 System.out.printf("Father was/is twice as old as son %d years ago, in the year %d",fatherTwiceAsOld, yearFatherTwiceAsOld);
