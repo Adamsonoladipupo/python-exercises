@@ -17,9 +17,49 @@ nokia3310 = """
 
 """
 print(nokia3310)
-mainMenu = int(input())
-match mainMenu:
-	case 1: print("Phone book")
+main_menu = int(input())
+match main_menu:
+	case 1: 
+		doc_phone_book = """
+			Phone book selected...
+			Make a selection to proceed
+
+			1-> Search
+			2-> Service number
+			3-> Add name
+			4-> Erase
+			5-> Edit
+			6-> Assign tone
+			7-> Send b'card
+			8-> Options
+			9-> Speed dails
+			10-> Voice tags
+		"""
+		print(doc_phone_book)
+		phone_book = int(input())
+		match phone_book:
+			case 1: print("Search")
+			case 2: print("Service number")
+			case 3: print("Add name")
+			case 4: print("Erase")
+			case 5: print("Edit")
+			case 6: print("Assign tone")
+			case 7: print("Send b'card")
+			case 8: 
+				doc_option = """
+					Option selected...
+					Make a selection to proceed
+
+					1-> Type of view
+					2-> Memory status
+				"""
+				print(doc_option)
+				option = int(input())
+				match option:
+					case 1: print("Type of view")
+					case 2: print("Memory status")
+			case 9: print("Speed dails")
+			case 10: print("Voice tags")
 	case 2: print("Messages")
 	case 3: print("chat")
 	case 4: print("Call register")
