@@ -230,7 +230,7 @@ match main_menu:
 			case 9: print("Screen saver")
 	case 6:
 		doc_setting = """
-			Tones selected ...
+			Settings selected ...
 			Make a selection to proceed
 
 			1-> Call settings
