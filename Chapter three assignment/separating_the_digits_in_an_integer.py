@@ -5,4 +5,5 @@ digits_number= 0
 for count in range(5):
 	digits_number = user_input % 10
 	user_input //= 10
+	print("counts", count end="   ")
 	print (digits_number, end=" ")
