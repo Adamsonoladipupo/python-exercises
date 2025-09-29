@@ -14,6 +14,8 @@ population = 1
 time = 1
 for time in range (1, 101):
 	population = 8231970628 * (2.71818**(0.85*time))
-	print(time,"  ", population)
+	increase = population - (8231970628 * (2.71818**(0.85*(time-1))))
+	
+	print(time,"          ", population, "          ", increase)
 #print("Year")
 	
