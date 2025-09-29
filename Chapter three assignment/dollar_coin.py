@@ -12,4 +12,4 @@ nickels = number * 20
 dimes = number * 10
 quarters = number * 4
 
-print("Pennies: ", pennies, "Nickels: ", nickels, "Dimes: ", dimes,"Quarters: ", quarters)
+print("Pennies: ", pennies,"\n", "Nickels: ", nickels, "\n", "Dimes: ", dimes, "\n","Quarters: ", quarters, "\n" ),
