@@ -1,0 +1,1 @@
+def palindrome_and_prime_number (a, b):
