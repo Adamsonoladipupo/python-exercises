@@ -1,4 +1,5 @@
 user_input = int(input("Enter a Polindrome number: "))
+#initial_user_input 
 user_input = user_input_v2 = user_input
 digit_count = 1
 while user_input > 9:
@@ -15,12 +16,8 @@ for count in range (digit_count, 0, -1):
 	palindrome = single_digit * (10 ** (count-1))
 	palindromes = palindromes + palindrome
 
-factors = 0
-for count in range (2, user_input_v3):
-	if user_input_v3 % count == 0:
-		factors = factors + 1
-
-if factors > 0 and user_input_v3 == palindromes:
-	print("True")
+if user_input_v3 == palindromes:
+	print("Yes, this is a Polindrome")
 else:
-	print("False")	
+	print("This is not a Polindrome")
+	
