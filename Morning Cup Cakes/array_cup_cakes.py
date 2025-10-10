@@ -120,12 +120,35 @@ def is_largest(numbers):
 	return largest
 
 def strings_length(strings):
-	if len(strings) > 2:
+	if len(strings) >= 2 and strings[0] == strings[len(strings)-1]:
+		return strings
+	
+"""
+sequenctial_integers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+print(sequenctial_integers)
+"""
+
+def add_third_position(numbers):
+	add_third = 1
+	for count in range(0, len(numbers), 3):
+		add_third += numbers[count]
 		
+	return add_third
+
+def sum_of_first_middle_last(numbers):
+	summation = 0
+	middle_number = 0
+	if (len(numbers) % 2 != 0):
+		middle_number = numbers[int(len(numbers) / 2)]
+	if (len(numbers) % 2 == 0):
+		middle_number = (numbers[int(len(numbers) / 2)-1] + numbers[int(len(numbers) / 2)]) / 2
+	summation = numbers[0] + middle_number + numbers[len(numbers)-1]
+	return summation
 
 
-strings = [she, good, book, shadow]
-result = is_largest(numbers)
+numbers = [10,9,11,8,  4,  3,2,12,4]
+#strings = ['she', 'good', 'book', 'she']
+result = sum_of_first_middle_last(numbers)
 print(result)
 
 
