@@ -80,7 +80,6 @@ def sum_even(numbers):
 	sum_of_even = 0
 	for count in range(1, len(numbers), 2):
 		sum_of_even += numbers[count]
-		
 	return sum_of_even
 
 def sum_odd(numbers):
