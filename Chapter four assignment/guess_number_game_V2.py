@@ -13,13 +13,12 @@ def guess_number_game():
 
 			Congratulations!!!
 			You guessed the number!
-			
+
 
 			Enter:
 			-1 --> To exit
 			0 --> To play again
 			"""
-			
 			print("")
 			print("")
 			print(f"Number of guesses: {number_of_guess}")
