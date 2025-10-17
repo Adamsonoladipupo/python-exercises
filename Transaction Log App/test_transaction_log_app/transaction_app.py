@@ -1,6 +1,7 @@
 import transaction_app_function
 
 account_balance = 0
+transactions = 0
 
 while True:
 	doc_main_menu = """
@@ -18,11 +19,24 @@ while True:
 		case 1: 
 			amount = int(input("Enter deposit amount: "))
 			account_balance = transaction_app_function.deposit(amount, account_balance, transactions = [])
-			transactions = transactions[]
+			transactions = (f"Deposited: ₦{amount} | New Balance: ₦{account_balance}")
 			print(transactions)
 		case 2: 
 			amount = int(input("Enter withdrawal amount: "))
 			account_balance = transaction_app_function.withdraw(amount, account_balance, transactions = [])
-			transactions = (f"Withdrew: ₦{amount} | New Balance: ₦{account_balance}")
+			if amount < account_balance:
+				transactions = (f"Withdrew: ₦{amount} | New Balance: ₦{account_balance}")
+			else: 
+				transactions = ("Withdrawal failed: insufficient funds")
 			print(transactions)
+		case 3: 
+			if transactions == 0:
+				print("No transactions yet.")
+			else:
+				print("Transactions so far")
+				print(transactions)
+		case 4: 
+			print(f"Final Balance ₦{account_balance} \nThank you for using Transaction Log App!")
+			break
+				
 			
