@@ -22,7 +22,7 @@ def main_menu(amount, account_balance, transactions = []):
 		case 4: a
 
 def deposit(amount, account_balance, transactions = []):
-	account_balance += + amount
+	account_balance += amount
 	transactions = (f"Deposited:₦{amount} | New Balance:₦{account_balance}") 
 	print(transactions)
 	return account_balance
