@@ -1,5 +1,4 @@
-account_balance = 0
-def deposit(amount, account_balance, transactions = [] ):
+def deposit(amount, account_balance, transactions = []):
 	account_balance += amount
 	transaction = (f"Deposited: ₦{amount} | New Balance: ₦{account_balance}")
 	transactions += transaction
@@ -13,6 +12,6 @@ def withdraw(amount, account_balance, transactions = []):
 		transaction = ("Withdrawal failed: insufficient funds")
 	transactions += transaction
 	return account_balance
-def show_transactions(transactions):
+def show_transactions(transactions = []):
 	return transactions 
 
