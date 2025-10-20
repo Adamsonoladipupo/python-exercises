@@ -13,5 +13,6 @@ def withdraw(amount, account_balance, transactions = []):
 	transactions += transaction
 	return account_balance
 def show_transactions(transactions = []):
-	return transactions 
+	for transaction in transactions:
+		return transaction
 

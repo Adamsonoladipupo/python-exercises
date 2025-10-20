@@ -8,6 +8,7 @@ while True:
  	3. Remove Book
  	4. Update book 
 	5. Show all books
+	6. Exit
 	"""
 	print(docstring)
 	user_input = int(input("Make a selection"))
@@ -17,4 +18,7 @@ while True:
 		case 3: book_Selection_System_function.remove_book()
 		case 4: book_Selection_System_function.update_book()
 		case 5: book_Selection_System_function.get_books()
+		case 6: 
+			print("Thank you!")
+			break
 	
