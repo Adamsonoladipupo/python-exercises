@@ -1,6 +1,6 @@
 import MFDS_functions
 choice = ""
-transactions = ""
+transactions = []
 
 while True:
 	docMain = """
@@ -31,7 +31,9 @@ while True:
 			Petroleum = int(input("Enter operation: "))
 			match Petroleum:
 				case 1: 
-					choice = MFDS_functions.buy_petrol(choice, transactions = [])
+					choice = MFDS_functions.buy_petrol(choice, transactions =[])
+					transaction = choice
+					transactions.append(transaction)
 					print(choice)
 
 				case 2: 
@@ -41,8 +43,11 @@ while True:
 					choice = MFDS_functions.buy_kerosene(choice)
 					print(choice)
 				case 4: 
-					choice = MFDS_functions.buy_gas(choice)
-					print(choice)
+					transactions = MFDS_functions.buy_gas(transactions)
+					if transactions == []:
+						print ("Sorry, you have not made any transactions today")
+
+				case _: print("Invalid input, choose from the options in the list")
 
 		case 2: 
 			transactions_history = MFDS_functions.get_transaction_history(transactions = [])
@@ -53,4 +58,5 @@ while True:
 		case 3: 
 			print("Thank you for visiting GBeda Station")
 			break
-		
+		case _:	
+			print("Invalid input, choose from the options in the list")

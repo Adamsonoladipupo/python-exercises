@@ -1,8 +1,11 @@
-def buy_petrol(choice):
+def buy_petrol(choice, transactions):
 	choice = input("choose input type: liter or amount: ")
 	receipt = ""
 	if choice == "liter":
 		input_liter = int(input("How Many Liters of petrol are you buying (₦650/L): "))
+		while input_liter < 1:
+			ValueError = ("Liters must be between 1 - 50  !!!")
+			return ValueError
 		cost_of_petrol = input_liter * 650
 
 		receipt = f"""
@@ -22,6 +25,9 @@ def buy_petrol(choice):
 
 	if choice == "amount":
 		input_amount = int(input("How much petrol are you buying (₦650/L): "))
+		while input_amount < 650:
+			ValueError = ("Amount must be above a liter price !!!")
+			return ValueError
 		amount_of_petrol = input_amount / 650
 
 		receipt = f"""
@@ -39,6 +45,7 @@ def buy_petrol(choice):
 		"""
 		return receipt
 
+	transactions.append(receipt)
 	return choice
 	
 
@@ -47,6 +54,9 @@ def buy_diesel(choice):
 	receipt = ""
 	if choice == "liter":
 		input_liter = int(input("How Many Liters of petrol are you buying (₦720/L): "))
+		while input_liter < 1:
+			ValueError = ("Liters must be between 1 - 50  !!!")
+			return ValueError
 		cost_of_petrol = input_liter * 720
 
 		receipt = f"""
@@ -66,6 +76,9 @@ def buy_diesel(choice):
 
 	if choice == "amount":
 		input_amount = int(input("How much petrol are you buying (₦720/L): "))
+		while input_amount < 720:
+			ValueError = ("Amount must be above a liter price !!!")
+			return ValueError
 		amount_of_petrol = input_amount / 720
 
 		receipt = f"""
@@ -83,6 +96,7 @@ def buy_diesel(choice):
 		"""
 		return receipt
 
+	transactions.append(receipt)
 	return choice
 
 
@@ -91,6 +105,9 @@ def buy_kerosene(choice):
 	receipt = ""
 	if choice == "liter":
 		input_liter = int(input("How Many Liters of petrol are you buying (₦550/L): "))
+		while input_liter < 1:
+			ValueError = ("Liters must be between 1 - 50  !!!")
+			return ValueError
 		cost_of_petrol = input_liter * 550
 
 		receipt = f"""
@@ -110,6 +127,9 @@ def buy_kerosene(choice):
 
 	if choice == "amount":
 		input_amount = int(input("How much petrol are you buying (₦550/L): "))
+		while input_amount < 550:
+			ValueError = ("Amount must be above a liter price !!!")
+			return ValueError
 		amount_of_petrol = input_amount / 550
 
 		receipt = f"""
@@ -127,6 +147,7 @@ def buy_kerosene(choice):
 		"""
 		return receipt
 
+	transactions.append(receipt)
 	return choice
 	
 
@@ -135,6 +156,9 @@ def buy_gas(choice):
 	receipt = ""
 	if choice == "liter":
 		input_liter = int(input("How Many Liters of petrol are you buying (₦480/L): "))
+		while input_liter < 1:
+			ValueError = ("Liters must be between 1 - 50  !!!")
+			return ValueError
 		cost_of_petrol = input_liter * 480
 
 		receipt = f"""
@@ -154,6 +178,9 @@ def buy_gas(choice):
 
 	if choice == "amount":
 		input_amount = int(input("How much petrol are you buying (₦480/L): "))
+		while input_amount < 480:
+			ValueError = ("Amount must be above a liter price !!!")
+			return ValueError
 		amount_of_petrol = input_amount / 480
 
 		receipt = f"""
@@ -171,8 +198,14 @@ def buy_gas(choice):
 		"""
 		return receipt
 
+	transactions.append(receipt)
 	return choice
 
 
-def get_transaction_history(transactions = []):
+def get_transaction_history(transactions):
+	if len(transactions) < 0:
+		transactions = "Sorry, you have not made any transactions today"
+		return transactions
+
 	return transactions
+
