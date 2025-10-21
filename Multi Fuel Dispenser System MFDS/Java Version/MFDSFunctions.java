@@ -2,19 +2,15 @@ public class MFDSFunctions{
 	public static void main(String[] args){
 		
 	}
-	public static string buyPetrol(choice){
-
+	public static int buyPetrolWithPrice(int price){
+		int liter = price / 650;
+		return liter;
 	}
 
-	public static string buyDiesel(choice){
-
+	public static int buyPetrolWithLiter(int liter){
+		int price = liter * 650;
+		return price;
 	}
 
-	public static string buyKerosene(choice){
 
-	}
-
-	public static string buyGas(choice){
-
-	}
 }
