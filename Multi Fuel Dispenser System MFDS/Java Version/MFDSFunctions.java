@@ -1,6 +1,5 @@
 public class MFDSFunctions{
-	public static void main(String[] args){
-		
+	public static void main(String[] args){	
 	}
 	public static int buyPetrolWithPrice(int price){
 		int liter = price / 650;
@@ -11,6 +10,7 @@ public class MFDSFunctions{
 		int price = liter * 650;
 		return price;
 	}
+
 
 
 }

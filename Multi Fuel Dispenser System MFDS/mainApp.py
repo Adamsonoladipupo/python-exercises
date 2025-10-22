@@ -15,9 +15,9 @@ while True:
 
 	"""
 	print(docMain)
-	mainMenu = int(input("Enter operation: "))
+	mainMenu = input("Enter operation: ")
 	match mainMenu:
-		case 1:
+		case "1":
 			docPetroleum = """
 
 	Available petroleum
@@ -29,9 +29,9 @@ while True:
 
 			"""
 			print(docPetroleum)
-			Petroleum = int(input("Enter operation: "))
+			Petroleum = input("Enter operation: ")
 			match Petroleum:
-				case 1: 
+				case "1": 
 					buy_options = input("choose input type (liter or amount): ")			
 					if buy_options == "amount":
 						price = int(input("How much petrol are you buying: "))
@@ -55,7 +55,7 @@ while True:
 					print(receipt)
 					transactions.append(receipt)
 
-				case 2: 
+				case "2": 
 
 					buy_options = input("choose input type (liter or amount): ")			
 					if buy_options == "amount":
@@ -81,7 +81,7 @@ while True:
 					transactions.append(receipt)
 
 
-				case 3: 
+				case "3": 
 					buy_options = input("choose input type (liter or amount): ")			
 					if buy_options == "amount":
 						price = int(input("How much kerosene are you buying: "))
@@ -105,7 +105,7 @@ while True:
 					print(receipt)
 					transactions.append(receipt)
 
-				case 4: 
+				case "4": 
 					buy_options = input("choose input type (liter or amount): ")			
 					if buy_options == "amount":
 						price = int(input("How much gas are you buying: "))
@@ -131,7 +131,7 @@ while True:
 
 				case _: print("Invalid input, choose from the options in the list")
 
-		case 2: 
+		case "2": 
 			transactions_history = MFDS_function.get_transaction_history(transactions = [])
 			if len(transactions) > 0:
 				for count in transactions:
@@ -139,7 +139,7 @@ while True:
 			if transactions == []:
 				print("Sorry, you have not made any transactions today")
 
-		case 3: 
+		case "3": 
 			print("Thank you for visiting GBeda Station")
 			break
 		case _:	

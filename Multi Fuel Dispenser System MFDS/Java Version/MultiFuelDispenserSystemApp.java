@@ -58,10 +58,10 @@ public class MultiFuelDispenserSystemApp{
 		==================================
 		= Product : Petrol        
 		= Amount : %d        
-		= Liters :  %dL        
+		= Liters : %dL
 		= Thank you For your Petronage  
 		==================================
-		Saving Transaction History. . . . 
+		Saving Transaction History. . . .
 						""", price, liter);
 						System.out.print(receipt);
 					
