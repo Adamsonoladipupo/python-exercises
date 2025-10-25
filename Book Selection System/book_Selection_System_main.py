@@ -1,29 +1,7 @@
 import random
+from book_functions import *
 
-def main_menu():
-	display_menu = """
-	
-	Welcome to ACORA Books
-	1. Get book suggesttions
-	2. Add books
-	3. Remove books
-	4. Update books
-	5. Show all books
-	
-	"""
-	return display_menu
-
-def suggest_books(inputs):
-	suggestion_display =f"""
-
-	Book title: {random.choice(inputs)}
-	Book page: {random.randrange(1, 100)}
-
-	""" 
-	return suggestion_display
-
-
-books = ["Atomic Habit", "Magic Finger" ]
+books = ["Atomic Habit", "Magic Fingers", "Clean Coder","a"  ]
 
 #def add_books():
 
@@ -43,20 +21,25 @@ while True:
 					
 		case "2": 
 			user_input = input("Enter the book title: ")
-			books.append(user_input)
-			print(f"{user_input} added successfully!")
+			print(add_book(user_input, books))
 		
-		case "3": print("3")
-		case "4": print("4")
+		case "3":
+			user_input = input("Enter the book title to remove: ")
+			removal = remove_book(user_input, books)
+			print(removal)
+
+		case "4":
+			user_input = input("Enter the old book title: ")
+			user_input_new = input("Enter thr new book title: ")
+			print(update_book(user_input, user_input_new, books))
+
+
 		case "5": 
 			print("Available Books: ")
 			count = 0
 			for book in books:
 				count +=1
 				print(f"{count}. {book}")
+		case "6": print(books)
 
 		case _: print("Invalid input, select from the options displayed")
-
-print("End not in the main loop")
-
-
