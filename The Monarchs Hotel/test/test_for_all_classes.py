@@ -27,9 +27,9 @@ class TestingForGuestClass(unittest.TestCase):
         guest = Guest("Benny", "adamson@gmail.com", "08122222222", 1234,False)
         self.assertEqual("Benny", guest.get_name())
 
-    def test_for_invalid_email_for_a_new_guests_object(self):
-        with self.assertRaises(TypeError):
-            Guest("Benny", "macadamising.com", "08122222222", 1234,False)
+    # def test_for_invalid_email_for_a_new_guests_object(self):
+    #     with self.assertRaises(TypeError):
+    #         Guest("Benny", "macadamising.com", "08122222222", 1234,False)
 
     def test_for_invalid_email_for_a_new_guests_object(self):
         with self.assertRaises(TypeError):

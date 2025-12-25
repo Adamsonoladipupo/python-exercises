@@ -10,6 +10,5 @@ class Hotel:
     def get_name(self):
         return self.name
 
-    def add_guest(self, guest):
-        hotel_guests.
+
 

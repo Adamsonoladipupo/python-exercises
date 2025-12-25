@@ -6,3 +6,4 @@ class Native(person):
     count = 0
 
     def __init__(self, userID):
+        super().__init__()
