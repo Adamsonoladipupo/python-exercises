@@ -9,24 +9,24 @@ todos = []
 class Todo:
     _counter = 0
 
-    def __init__(self, title: str, description: str, is_done: bool, date: datetime,):
+    def __init__(self, title: str, description: str, is_done: bool):
         Todo._counter += 1
         self.todo_id = Todo._counter
         self.title = title
         self.description = description
         self.is_done = is_done
-        self.date = date
+        self.date = datetime.now()
 
 @app.get("/todos")
 def get_todo():
     return todos
 
 @app.post("/todos")
-def create_todo(title: str, description: str, is_done: bool):
-    current_date = datetime.now()
-    new_todo = Todo(title=title, description=description, is_done=is_done, date=current_date)
+def add_a_new_todo(new_todo: dict = Body(...)):
+    new_todo = Todo(**new_todo)
     todos.append(new_todo)
     return new_todo
+
 
 @app.get("/todos/{todo_id}")
 def read_todo(todo_id: int):
@@ -34,6 +34,7 @@ def read_todo(todo_id: int):
         if existing_todo.todo_id == todo_id:
             return existing_todo
     return None
+
 
 @app.delete("/todos/{todo_id}")
 def read_todo(todo_id: int):

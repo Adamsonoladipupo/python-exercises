@@ -19,7 +19,6 @@ MOVIES = [
 {"ID":15,"Moviename":"Titanic II","Genre":"Drama","YearOfRelease":2010,"Budget":5000000,"Revenue":12300000,"DirectorName":"Shane Van Dyke"},
 {"ID":16,"Moviename":"Guardians of the Galaxy","Genre":"Sci-Fi","YearOfRelease":2014,"Budget":170000000,"Revenue":773328629,"DirectorName":"James Gunn"},
 {"ID":17,"Moviename":"Incredibles 2","Genre":"Animation","YearOfRelease":2018,"Budget":200000000,"Revenue":1242805359,"DirectorName":"Brad Bird"}
-
 ]
 
 class Movie():
